@@ -1,1 +1,661 @@
-Placeholder - support.jessemsmith.com.au
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jesse Smith - NDIS Support Worker, Melbourne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div class="container">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="#" class="nav-name">Jesse Smith</a>
+      <ul class="nav-links">
+        <li><a href="#services">Services I offer</a></li>
+        <li><a href="#approach">About me and my approach</a></li>
+        <li><a href="#practical">Practical info</a></li>
+        <li><a href="#contact">Get in touch</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" onclick="openMenu()">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+          <path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <div class="mobile-menu-header">
+        <a href="#" class="nav-name">Jesse Smith</a>
+        <button class="mobile-menu-close" aria-label="Close menu" onclick="closeMenu()">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-menu-links">
+        <li><a href="#services" onclick="closeMenu()">Services I offer</a></li>
+        <li><a href="#approach" onclick="closeMenu()">About me and my approach</a></li>
+        <li><a href="#practical" onclick="closeMenu()">Practical info</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Get in touch</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="container">
+
+      <!-- ── Hero ── -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-eyebrow">NDIS Support Worker · Melbourne</div>
+        <h1 id="hero-heading">Support that fits<br><em>how your brain works.</em></h1>
+        <p class="hero-intro">
+          💫 You made it! 💫 Well done on taking this step, I know these things
+          can be hard and I'm glad you're here.
+        </p>
+        <p class="hero-intro">
+          I'm Jesse, a support worker based in Melbourne's north. My background
+          is working for the National Disability Insurance Agency. I work with
+          disabled adults who want supports that fit how their brain, lifestyle
+          and interests work.
+        </p>
+        <p class="hero-intro">
+          I am proudly neurodivergent, Deaf, and queer. I know what it's like to
+          be treated differently, so I <a href="#supports">provide supports</a>
+          to people with all types of disabilites that respects and centres who
+          you are as a person. I specialise in supporting people who share my
+          identities and lived experiences. You can read more
+          <a href="#approach">about me and my approach</a> below.
+        </p>
+        <div class="hero-tags" aria-label="Key things about my practice">
+          <span class="tag tag--clay">Neuroaffirming</span>
+          <span class="tag tag--teal">Trans &amp; LGBTQIA+ affirming</span>
+          <span class="tag tag--amber">Self-managed &amp; plan-managed</span>
+          <span class="tag">Adults 18+</span>
+          <span class="tag">Coburg / Preston &amp; surrounds</span>
+        </div>
+      </section>
+
+      <!-- ── Services ── -->
+      <section id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading">Services I offer</h2>
+        <p style="margin-bottom: 36px; color: var(--text-sec); font-size: 0.9375rem;">
+          Each section has a brief summary — click or tap to read more detail if
+          you want specifics before reaching out.
+        </p>
+
+        <div class="services-grid" id="services-list">
+
+          <div class="service-card" id="card-home">
+            <button
+              class="service-summary-btn"
+              aria-expanded="false"
+              aria-controls="detail-home"
+              onclick="toggleCard('card-home', 'detail-home', this)"
+            >
+              <div>
+                <div class="service-title">Getting things done at home</div>
+                <div class="service-blurb">
+                  Cooking, cleaning, laundry, organising. I can do this for you
+                  or alongside you in a way that builds your skills and confidence
+                  over time. If it suits your goals better for me handle this for
+                  you, I can do that instead.
+                </div>
+              </div>
+              <div class="expand-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="service-detail" id="detail-home" role="region" aria-labelledby="card-home-title" hidden>
+              <div class="service-detail-inner">
+                <div class="detail-label">Specifics</div>
+                <ul class="detail-list">
+                  <li>Meal planning, prep and cooking. Making meals in bulk, or
+                    just one meal. From scratch or from packet, whatever works
+                    for you.</li>
+                  <li>Cleaning and tidying, including planning it out in
+                    manageable chunks.</li>
+                  <li>Laundry, dishes, bins - the ongoing stuff that piles up.</li>
+                  <li>Organising spaces - cupboards, paperwork piles, storage.</li>
+                  <li>Building routines and systems that suit how you want to
+                    live.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" id="card-exec">
+            <button
+              class="service-summary-btn"
+              aria-expanded="false"
+              aria-controls="detail-exec"
+              onclick="toggleCard('card-exec', 'detail-exec', this)"
+            >
+              <div>
+                <div class="service-title">
+                  Executive function and the hard stuff to start
+                </div>
+                <div class="service-blurb">
+                  Body doubling, task initiation, breaking things down, managing
+                  overwhelm, building routines that work for your brain and goals.
+                </div>
+              </div>
+              <div class="expand-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="service-detail" id="detail-exec" role="region" hidden>
+              <div class="service-detail-inner">
+                <div class="detail-label">Specifics</div>
+                <ul class="detail-list">
+                  <li>Body doubling — being present while you work on things you
+                    can't start alone</li>
+                  <li>Task initiation support for things that feel impossible to
+                    begin</li>
+                  <li>Breaking overwhelming tasks into steps that actually feel
+                    doable</li>
+                  <li>Identifying patterns in what blocks you and working around
+                    them</li>
+                  <li>Building routines that account for your energy levels and
+                    sensory needs</li>
+                  <li>Managing overwhelm in the moment without judgment</li>
+                  <li>Helping you figure out tools, apps, or strategies that
+                    might help (without overwhelming you with options)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" id="card-admin">
+            <button
+              class="service-summary-btn"
+              aria-expanded="false"
+              aria-controls="detail-admin"
+              onclick="toggleCard('card-admin', 'detail-admin', this)"
+            >
+              <div>
+                <div class="service-title">
+                  Getting your life admin up to date and under control
+                </div>
+                <div class="service-blurb">
+                  Anything that lives in a pile you haven't touched - Government
+                  forms, NDIS paperwork, bills, emails, Centrelink. I can sit
+                  with you while you do it, or take the lead where that's more
+                  helpful.
+                </div>
+              </div>
+              <div class="expand-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="service-detail" id="detail-admin" role="region" hidden>
+              <div class="service-detail-inner">
+                <div class="detail-label">Specifics</div>
+                <ul class="detail-list">
+                  <li>NDIS plan reviews and service agreement paperwork</li>
+                  <li>Centrelink and MyGov — navigating the system together</li>
+                  <li>Bills and financial admin that's stacked up</li>
+                  <li>Drafting or responding to emails that feel too hard</li>
+                  <li>Making phone calls on your behalf or alongside you</li>
+                  <li>Medical appointments — booking, reminders, following up referrals</li>
+                  <li>Dealing with anything official that's been sitting untouched</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" id="card-out">
+            <button
+              class="service-summary-btn"
+              aria-expanded="false"
+              aria-controls="detail-out"
+              onclick="toggleCard('card-out', 'detail-out', this)"
+            >
+              <div>
+                <div class="service-title">
+                  Getting out and about
+                </div>
+                <div class="service-blurb">
+                  Appointments, community activities, the gym, social outings,
+                  navigating unfamiliar environments or sensory-heavy spaces. I
+                  have a car we can use, or I can help with public transport.
+                </div>
+              </div>
+              <div class="expand-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="service-detail" id="detail-out" role="region" hidden>
+              <div class="service-detail-inner">
+                <div class="detail-label">Specifics</div>
+                <ul class="detail-list">
+                  <li>Transport support — accompanying you on public transport
+                    or by car</li>
+                  <li>Medical and allied health appointments</li>
+                  <li>Community activities, groups, or events you want to
+                    try</li>
+                  <li>The gym, pools, parks — physical activity you want support
+                    with</li>
+                  <li>Navigating new or unfamiliar environments before you go
+                    alone</li>
+                  <li>Sensory-heavy spaces — planning ahead, having an exit
+                    strategy, managing in the moment</li>
+                  <li>Social outings where having someone with you makes the
+                    difference</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" id="card-tech">
+            <button
+              class="service-summary-btn"
+              aria-expanded="false"
+              aria-controls="detail-tech"
+              onclick="toggleCard('card-tech', 'detail-tech', this)"
+            >
+              <div>
+                <div class="service-title">
+                  Technology and communication
+                </div>
+                <div class="service-blurb">Setting up systems, apps, devices,
+                  AAC tools, organising your digital life. I'm confident with any
+                  kind of tech (I'm a big computer science nerd!) and can help
+                  you find and use tools that suit you.</div>
+              </div>
+              <div class="expand-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="service-detail" id="detail-tech" role="region" hidden>
+              <div class="service-detail-inner">
+                <div class="detail-label">Specifics</div>
+                <ul class="detail-list">
+                  <li>Setting up phones, tablets, computers — getting them
+                    working for you</li>
+                  <li>AAC (Augmentative and Alternative Communication) device
+                    setup and support</li>
+                  <li>Finding and setting up apps that help with organisation,
+                    communication, or focus</li>
+                  <li>Sorting out email, calendars, reminders — systems that
+                    stick</li>
+                  <li>Digital decluttering — photos, files, inboxes</li>
+                  <li>Troubleshooting things that aren't working</li>
+                  <li>Teaching tech in a way that makes sense to you, not just
+                    how it's "supposed" to work</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" id="card-work">
+            <button
+              class="service-summary-btn"
+              aria-expanded="false"
+              aria-controls="detail-work"
+              onclick="toggleCard('card-work', 'detail-work', this)"
+            >
+              <div>
+                <div class="service-title">Employment and study</div>
+                <div class="service-blurb">Job searching, resume writing, interview
+                  prep, navigating workplaces, attending uni or TAFE, understanding
+                  your rights. Particularly useful if you're figuring out work for
+                  the first time or trying again after things didn't go well.</div>
+              </div>
+              <div class="expand-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="service-detail" id="detail-work" role="region" hidden>
+              <div class="service-detail-inner">
+                <div class="detail-label">Specifics</div>
+                <ul class="detail-list">
+                  <li>Resume writing and job applications</li>
+                  <li>Interview preparation — including managing nerves and masking
+                    fatigue</li>
+                  <li>Navigating workplace culture, communication, and expectations</li>
+                  <li>Understanding disability disclosure and your rights at work</li>
+                  <li>Attending uni, TAFE, or training — going with you if that
+                    helps</li>
+                  <li>Applying for reasonable adjustments or accessibility
+                    supports</li>
+                  <li>Processing and planning after jobs or placements that didn't
+                    work out</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" id="card-wellbeing">
+            <button
+              class="service-summary-btn"
+              aria-expanded="false"
+              aria-controls="detail-wellbeing"
+              onclick="toggleCard('card-wellbeing', 'detail-wellbeing', this)"
+            >
+              <div>
+                <div class="service-title">
+                  Emotional support and wellbeing
+                </div>
+                <div class="service-blurb">
+                  A steady, non-judgmental presence. I'm not a therapist, but I
+                  understand regulation, burnout, and what it's like when things
+                  are hard.
+                </div>
+              </div>
+              <div class="expand-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+              </div>
+            </button>
+            <div class="service-detail" id="detail-wellbeing" role="region" hidden>
+              <div class="service-detail-inner">
+                <div class="detail-label">Specifics</div>
+                <ul class="detail-list">
+                  <li>Being a steady, consistent presence and someone reliable to
+                    check in with</li>
+                  <li>Supporting regulation when things feel like too much</li>
+                  <li>Understanding autistic and ADHD burnout and how to work
+                    with it</li>
+                  <li>Not pushing through if you're not up to what was planned</li>
+                  <li>Helping you identify what you need without having to explain
+                    yourself from scratch every time</li>
+                  <li>I'm not a replacement for mental health supports, but I canvas
+                    complement them</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── Approach ── -->
+      <section id="approach" aria-labelledby="approach-heading">
+        <h2 id="approach-heading">About me and my approach</h2>
+        <p>
+          I bring my lived experience as a disabled person and a queer person to
+          my support work. I've had a lot of experience navigating the world as
+          someone pretty different from most people, but the same in dreams and
+          goals. I know what its like to be limited by the way our society works.
+        </p>
+        <p>
+          Read below to find out more about me and how I bring my lived experience
+          to my support work.
+        </p>
+        <p style="margin-bottom: 36px; color: var(--text-sec); font-size: 0.9375rem;">
+          Each section has a brief summary — click or tap to
+          read more detail if you want specifics before reaching out.
+        </p>
+        <div class="service-card" id="card-neurodivergent">
+          <button
+            class="service-summary-btn"
+            aria-expanded="false"
+            aria-controls="detail-admin"
+            onclick="toggleCard('card-neurodivergent', 'detail-neurodivergent', this)"
+          >
+            <div>
+              <div class="service-title">🧠 Proudly neurodivergent</div>
+              <div class="service-blurb">My belief is that neurodivergent brains
+                are a valuable part of human diversity and neurodivergent people
+                should be treasured and treated equally.</div>
+            </div>
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </button>
+          <div class="service-detail" id="detail-neurodivergent" role="region" hidden>
+            <div class="service-detail-inner">
+              <p>I am a late diagnosed ADHDer. I didn't know how much my neurodivergence
+                was impacting me until I was diagnosed. Many of my friends and
+                family have turned out to be neurodivergent too, so I spend most
+                of my time around other neurodivergent folks.</p>
+              <p>This has given me a clear view into the ways that different
+                brains are impacted by having to exist in a neurotypical world,
+                and the struggles - emotional and practical - of getting a late
+                diagnosis. I want to help make these challenges easier.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" id="card-deaf">
+          <button
+            class="service-summary-btn"
+            aria-expanded="false"
+            aria-controls="detail-admin"
+            onclick="toggleCard('card-deaf', 'detail-deaf', this)"
+          >
+            <div>
+              <div class="service-title">🦻 Proudly deaf</div>
+              <div class="service-blurb">I have lived experience with hearing
+                loss and an enthusiasm for Auslan that I bring to my support work.
+              </div>
+            </div>
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </button>
+          <div class="service-detail" id="detail-deaf" role="region" hidden>
+            <div class="service-detail-inner">
+              <p>My hearing loss was diagnosed when I was 13. I wear hearing
+                aids (I can hear you and we can use spoken language) and my first
+                language is English. As an adult I started learning Auslan, which
+                connected me to the Deaf community. I now proudly identify as
+                Deaf.</p>
+              <p>I'm not an interpreter, but if you use Auslan as your primary or
+                alternative way of communicating, I can provide support work
+                services in Auslan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" id="card-queer">
+          <button
+            class="service-summary-btn"
+            aria-expanded="false"
+            aria-controls="detail-admin"
+            onclick="toggleCard('card-queer', 'detail-queer', this)"
+          >
+            <div>
+              <div class="service-title">🌈 Proudly queer</div>
+              <div class="service-blurb">I am connected to the queer community
+                and am a strong supporter of trans rights and gender affirming
+                support work.</div>
+            </div>
+            <div class="expand-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </button>
+          <div class="service-detail" id="detail-queer" role="region" hidden>
+            <div class="service-detail-inner">
+              <p>Queer disabled people should be supported to engage with the
+                queer community. As someone already connected to the queer
+                community in Melbourne, I provide that support.</p>
+              <p>Dysphoria is a complex experience. Being invited into a trans
+                person's home and safe space to provide supports is a big thing.
+                I provide my supports in a gender affirming way so that you can
+                be yourself.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Practical ── -->
+      <section id="practical" aria-labelledby="practical-heading">
+        <h3>The details</h3>
+        <h2 id="practical-heading">Practical information</h2>
+        <div class="info-grid" role="list">
+
+          <div class="info-cell" role="listitem">
+            <div class="info-cell-label">Hourly rate</div>
+            <div class="info-cell-value">
+              <strong>$70.23/hr</strong><br>
+              Standard weekday daytime rate (NDIS price guide). Weekend and
+              evening rates available — just ask.
+            </div>
+          </div>
+
+          <div class="info-cell" role="listitem">
+            <div class="info-cell-label">Funding types</div>
+            <div class="info-cell-value">
+              I work with self-managed and plan-managed participants. I'm not a
+              registered NDIS provider.
+            </div>
+          </div>
+
+          <div class="info-cell" role="listitem">
+            <div class="info-cell-label">Invoicing</div>
+            <div class="info-cell-value">
+              Invoices sent after each session. No upfront payment or complicated
+              setup required.
+            </div>
+          </div>
+
+          <div class="info-cell" role="listitem">
+            <div class="info-cell-label">Location</div>
+            <div class="info-cell-value">
+              Based in Coburg. Happy to travel across Melbourne's north and
+              inner suburbs. Parking and transport costs agreed in advance where
+              applicable.
+            </div>
+          </div>
+
+          <div class="info-cell" role="listitem">
+            <div class="info-cell-label">Cancellations</div>
+            <div class="info-cell-value">
+              2 clear business days notice is appreciated where possible. Bad days
+              happen - talk to me and we'll work something out.
+            </div>
+          </div>
+
+          <div class="info-cell" role="listitem">
+            <div class="info-cell-label">Who I work with</div>
+            <div class="info-cell-value">
+              Adults 18 and over.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── What I don't do ── -->
+      <section id="limits" aria-labelledby="limits-heading">
+        <h2 id="limits-heading">What I don't do</h2>
+        <p style="margin-bottom: 24px;">
+          Below are supports I don't provide, shared with you upfront so you can
+          find the right person if I'm not it.
+        </p>
+        <ul class="limits-list">
+          <li>Hands-on personal care — showering, dressing, continence support</li>
+          <li>Clinical or health-related supports</li>
+          <li>Overnight or residential (SIL) shifts</li>
+          <li>Work with people under 18</li>
+        </ul>
+      </section>
+
+      <!-- ── Contact ── -->
+      <section id="contact" aria-labelledby="contact-heading" style="padding-bottom: 0; border-top: none;">
+        <div class="contact-block">
+          <h2 id="contact-heading">Get in touch</h2>
+          <p>If any of this sounds like what you're looking for, I'd love to hear
+            from you. No pressure, no lengthy intake process - we can just a chat
+            to see if we're a good fit.</p>
+          <p>You can click below or email me at jesse.smith@live.com.au. If you
+            prefer phone, text or online meeting, please let me know by email and
+            I'll provide my details to you directly.</p>
+          <a href="mailto:jesse.smith@live.com.au" class="contact-link">Email Jesse</a>
+        </div>
+      </section>
+
+    </div><!-- /container -->
+
+    <div class="container">
+      <footer class="site-footer">
+        <p>Jesse Smith · NDIS Support Worker · Melbourne, VIC · Sole trader, unregistered provider</p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    const hamburgerBtn = document.querySelector('.nav-hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      mobileMenu.querySelector('a').focus();
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      hamburgerBtn.focus();
+    }
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
+    });
+
+    function toggleCard(cardId, detailId, btn) {
+      const card = document.getElementById(cardId);
+      const detail = document.getElementById(detailId);
+      const isOpen = card.classList.contains('open');
+
+      if (isOpen) {
+        // Close
+        card.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        detail.style.maxHeight = detail.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          detail.style.maxHeight = '0';
+          detail.style.opacity = '0';
+        });
+        setTimeout(() => {
+          detail.hidden = true;
+        }, 350);
+      } else {
+        // Open
+        card.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        detail.hidden = false;
+        detail.style.maxHeight = '0';
+        detail.style.opacity = '0';
+        requestAnimationFrame(() => {
+          detail.style.maxHeight = detail.scrollHeight + 'px';
+          detail.style.opacity = '1';
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
