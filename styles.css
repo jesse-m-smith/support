@@ -9,30 +9,31 @@
       --clay-tint:   #C4897A;
       --teal-tint:   #7AADA6;
       --gold-tint:   #E8C97A;
+      --denim-tint:  #8FA9BF;
       --bg:          #F6F0ED;
       --text:        #2C2220;
       --text-sec:    #8C7B6B;
       --divider:     #E8DDD8;
       --white:       #FDFAF8;
 
-      --ff-head: 'Poppins', Georgia, serif;
-      --ff-body: 'DM Sans', system-ui, sans-serif;
+      --ff-head: 'Chewy', Arial, sans-serif;
+      --ff-body: 'Darker Grotesque', Arial, sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 125%; }
 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: var(--ff-body);
-      font-size: 17px;
+      font-size: 1.0625rem;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
     /* ── Layout ── */
     .container {
-      max-width: 720px;
+      max-width: 820px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -56,7 +57,7 @@
       font-size: clamp(1.5rem, 4vw, 2rem);
       font-weight: 400;
       line-height: 1.25;
-      color: var(--text);
+      color: var(--denim);
       margin-bottom: 8px;
     }
 
@@ -70,7 +71,7 @@
       margin-bottom: 32px;
     }
 
-    p { max-width: 65ch; text-wrap: pretty; }
+    p { max-width: none; text-wrap: pretty; }
     p + p { margin-top: 16px; }
 
     a { color: var(--clay); text-underline-offset: 3px; }
@@ -83,32 +84,42 @@
       border-bottom: 1px solid var(--divider);
     }
 
-    .hero-eyebrow {
-      font-family: var(--ff-body);
-      font-size: 0.875rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .hero-body {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 40px;
+      align-items: start;
     }
-    .hero-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 28px;
-      height: 2px;
-      background: var(--teal);
-      flex-shrink: 0;
+    .hero-photos {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .hero-photo {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+    .hero-photo--2 { object-position: center 50%; }
+    @media (max-width: 700px) {
+      .hero-body { grid-template-columns: 1fr; gap: 0; }
+      .hero-photos {
+        order: -1;
+        flex-direction: row;
+        gap: 12px;
+        max-width: 440px;
+      }
+      .hero-photo { flex: 1 1 0; min-width: 0; }
     }
 
     .hero-intro {
       margin-top: 32px;
       font-size: 1.125rem;
       color: var(--text);
-      max-width: 58ch;
+      max-width: none;
       text-wrap: pretty;
     }
 
@@ -130,6 +141,7 @@
     .tag--clay   { border-color: var(--clay-tint);  color: var(--clay); }
     .tag--teal   { border-color: var(--teal-tint);  color: var(--teal); }
     .tag--amber  { border-color: var(--gold-tint);  color: #96700B; }
+    .tag--denim  { border-color: var(--denim-tint); color: var(--denim); }
 
     /* ── Services ── */
     .services-grid {
@@ -177,10 +189,10 @@
     }
 
     .service-blurb {
-      font-size: 0.9375rem;
+      font-size: 1.125rem;
       color: var(--text-sec);
       line-height: 1.6;
-      max-width: 56ch;
+      max-width: none;
       text-wrap: pretty;
     }
 
@@ -220,7 +232,7 @@
     }
 
     .detail-label {
-      font-size: 0.8rem;
+      font-size: 0.95rem;
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -236,7 +248,7 @@
       gap: 6px;
     }
     .detail-list li {
-      font-size: 0.9375rem;
+      font-size: 1.125rem;
       color: var(--text);
       padding-left: 18px;
       position: relative;
@@ -250,7 +262,7 @@
     }
      .service-detail-inner p {
        margin-top: 20px;
-       font-size: 0.9375rem;
+       font-size: 1.125rem;
        color: var(--text);
        position: relative;
        text-wrap: pretty;
@@ -258,7 +270,7 @@
 
     /* ── Approach section ── */
     .approach-body { font-size: 1.0625rem; }
-    .approach-body p { max-width: 60ch; }
+    .approach-body p { max-width: none; }
 
     /* ── Practical info ── */
     .info-grid {
@@ -279,7 +291,7 @@
       padding: 22px 24px;
     }
     .info-cell-label {
-      font-size: 0.8125rem;
+      font-size: 0.95rem;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.07em;
@@ -287,12 +299,12 @@
       margin-bottom: 6px;
     }
     .info-cell-value {
-      font-size: 0.9375rem;
+      font-size: 1.125rem;
       color: var(--text);
       line-height: 1.5;
     }
     .info-cell-value strong {
-      font-size: 1.125rem;
+      font-size: 1.3rem;
       font-weight: 500;
       color: var(--text);
     }
@@ -333,7 +345,7 @@
     .contact-block p {
       color: rgba(253,250,248,0.85);
       font-size: 1.0625rem;
-      max-width: 52ch;
+      max-width: none;
     }
     .contact-link {
       display: inline-block;
@@ -391,7 +403,8 @@
 
     /* ── Nav ── */
     .site-nav {
-      padding: 20px 0;
+      padding: 16px 0 12px;
+      gap: 24px;
       border-bottom: 1px solid var(--divider);
       display: flex;
       justify-content: space-between;
@@ -399,17 +412,20 @@
     }
     .nav-name {
       font-family: var(--ff-head);
-      font-size: 1.1rem;
-      color: var(--text);
+      font-size: 1.43rem;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+      color: var(--teal);
       text-decoration: none;
     }
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 16px;
+      line-height: 1.2;
       list-style: none;
     }
     .nav-links a {
-      font-size: 0.875rem;
+      font-size: 1.125rem;
       color: var(--text-sec);
       text-decoration: none;
     }
@@ -469,8 +485,8 @@
     }
     .mobile-menu-links a {
       display: block;
-      font-family: var(--ff-head);
-      font-size: 1.75rem;
+      font-family: var(--ff-body);
+      font-size: 1.375rem;
       font-weight: 400;
       color: var(--text);
       text-decoration: none;
